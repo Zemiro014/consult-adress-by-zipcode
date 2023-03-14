@@ -5,8 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 @Data
-public class AddressResponseDto implements Serializable {
-    private static final long serialVersionUID = 1L;
+//public class AddressResponseDto implements Serializable {
+public class AddressResponseDto {
+//    private static final long serialVersionUID = 1L;
 
     private String cep;
     private String rua;
