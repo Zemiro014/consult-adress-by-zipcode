@@ -9,7 +9,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 @Service
-public class ViaCep {
+public class ViaCepConsuming {
 
     @Value("${via.cep.base.url}")
     private String viaCepBaseUrl;
@@ -27,7 +27,6 @@ public class ViaCep {
             while ((response = bufferedReader.readLine()) != null ) {
                 responseBuilder.append(response);
             }
-            System.out.println(responseBuilder);
 
             return responseBuilder;
 

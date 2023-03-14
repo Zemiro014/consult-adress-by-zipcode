@@ -1,7 +1,6 @@
 package jeronimo.wipro.challangeZipCode.controllers;
 
 
-import jeronimo.wipro.challangeZipCode.apiConsuming.ViaCep;
 import jeronimo.wipro.challangeZipCode.dto.requestDto.ZipCodeRequestDto;
 import jeronimo.wipro.challangeZipCode.dto.responsesDto.AddressResponseDto;
 import jeronimo.wipro.challangeZipCode.services.AddressService;

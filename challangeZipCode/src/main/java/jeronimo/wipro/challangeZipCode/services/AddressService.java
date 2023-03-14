@@ -1,6 +1,6 @@
 package jeronimo.wipro.challangeZipCode.services;
 
-import jeronimo.wipro.challangeZipCode.apiConsuming.ViaCep;
+import jeronimo.wipro.challangeZipCode.apiConsuming.ViaCepConsuming;
 import jeronimo.wipro.challangeZipCode.dto.responsesDto.AddressResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ public class AddressService {
     private FreteService freteService;
 
     @Autowired
-    private ViaCep viaCep;
+    private ViaCepConsuming viaCepConsuming;
 
     public AddressResponseDto getEnderecoComFrete(String cep) {
-        StringBuilder response = viaCep.getAddressViaCepJson(cep);
+        StringBuilder response = viaCepConsuming.getAddressViaCepJson(cep);
 
         JsonObject jsonObject = new JsonObject(response.toString());
 
@@ -28,7 +28,7 @@ public class AddressService {
         addressResponseDto.setBairro(jsonObject.getString("bairro"));
         addressResponseDto.setEstado(jsonObject.getString("uf"));
 
-        double frete = freteService.calcularFrete(cep);
+        double frete = freteService.calcularFrete(jsonObject.getString("uf"));
         addressResponseDto.setFrete(frete);
 
         return addressResponseDto;
