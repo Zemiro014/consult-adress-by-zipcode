@@ -1,9 +1,12 @@
 package jeronimo.wipro.challangeZipCode.controllers;
 
 
+import io.swagger.v3.oas.annotations.Operation;
 import jeronimo.wipro.challangeZipCode.dto.requestDto.ZipCodeRequestDto;
 import jeronimo.wipro.challangeZipCode.dto.responsesDto.AddressResponseDto;
 import jeronimo.wipro.challangeZipCode.services.AddressService;
+import org.springdoc.core.annotations.RouterOperation;
+import org.springdoc.core.annotations.RouterOperations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
