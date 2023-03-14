@@ -22,7 +22,15 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-	<!--		LOMBOK-->
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.11.1</version>
+		</dependency>
+
+
+		<!--		LOMBOK-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
